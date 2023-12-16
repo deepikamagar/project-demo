@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login & Registration Form</title>
+    <link rel="stylesheet" href="L&Rform.css" />
+    <!-- Unicons CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <img src="images/logo.png" alt="Rentflex Logo" width="100vh" />
+      </div>
+      <nav>
+        <div class="search-container">
+          <i class="uil uil-search"></i>
+          <input type="text" id="searchInput" placeholder="Search..." />
+          <button type="submit" id="searchButton">Search</button>
+        </div>
+        <div class="nav-items">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="./L&Rform.html">Post Your Room</a></li>
+          <li><a href="#">Feedback</a></li>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <!--Login Form-->
+      <div id="loginForm" class="form-container">
+        <h1 style="font-size: 25px; color: #883d1a">Login</h1>
+        <form onsubmit="validateLogin(event)">
+          <input
+            type="text"
+            placeholder="Enter your username or email"
+            id="loginUsername"
+          />
+          <input
+            type="password"
+            placeholder="Enter your password"
+            id="loginPassword"
+          />
+          <p style="text-align: left">
+            <a class="toggle-form" onclick="forgotPassword()"
+              >Forgot password?</a
+            >
+          </p>
+          <button type="submit">Log in</button>
+        </form>
+        <div class="bottom-link">
+          <span>Not a member?</span>
+          <a class="toggle-form" onclick="toggleForms()"> Signup Now</a>
+        </div>
+      </div>
+
+      <!--Registration Form-->
+      <div id="registrationForm" class="form-container" style="display: none">
+        <h1 style="font: size 25px; color: #883d1a">Registeration</h1>
+        <p>Please fill in the details to create an account with us.</p>
+        <form onsubmit="validateRegistration(event)">
+          <input
+            type="text"
+            placeholder="Enter your Full Name"
+            id="fullName"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Create a username"
+            id="regUsername"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            id="regEmail"
+            required
+          />
+          <input
+            type="tel"
+            placeholder="Enter your Phone Number"
+            id="phoneNumber"
+            required
+          />
+          <select id="district">
+            <option value="">--Choose your district--</option>
+            <option value="Achham">Achham</option>
+            <option value="Arghakhanchi">Arghakhanchi</option>
+            <option value="Baglung">Baglung</option>
+            <option value="Baitadi">Baitadi</option>
+            <option value="Bajhang">Baitadi</option>
+            <option value="Bajura">Bajura</option>
+            <option value="Banke">Bajura</option>
+            <option value="Bara">Bara</option>
+            <option value="Bardiya">Bardiya</option>
+            <option value="Bhaktapur">Bhaktapur</option>
+            <option value="Bhojpur">Bhojpur</option>
+            <option value="Chitwan">Chitwan</option>
+            <option value="Dadeldhura">Dadeldhura</option>
+            <option value="Dailekh">Dailekh</option>
+            <option value="Dang">Dang</option>
+            <option value="Darchula">Darchula</option>
+            <option value="Dhading">Dhading</option>
+            <option value="Dhankuta">Dhankuta</option>
+            <option value="Dhanusa">Dhanusa</option>
+            <option value="Dholkha">Dholkha</option>
+            <option value="Dolpa">Dolpa</option>
+            <option value="Doti">Doti</option>
+            <option vaue="Eastern Rukum">Eastern Rukum</option>
+            <option value="Gorkha">Gorkha</option>
+            <option value="Gulmi">Gulmi</option>
+            <option value="Humla">Humla</option>
+            <option value="Ilam">Ilam</option>
+            <option value="Jajarkot">Jajarkot</option>
+            <option value="Jhapa">Jhapa</option>
+            <option value="Jumla">Jumla</option>
+            <option value="Kailali">Kailali</option>
+            <option value="Kalikot">Kalikot</option>
+            <option value="Kanchanpur">Kanchanpur</option>
+            <option value="Kapilvastu">Kapilvastu</option>
+            <option value="Kaski">Kaski</option>
+            <option value="Kathmandu">Kathmandu</option>
+            <option value="Kavrepalanchok">Kavrepalanchok</option>
+            <option value="Khotang">Khotang</option>
+            <option value="Lalitpur">Lalitpur</option>
+            <option value="Lamjung">Lamjung</option>
+            <option value="Mahottari">Mahottari</option>
+            <option value="Makwanpur">Makwanpur</option>
+            <option value="Manang">Manang</option>
+            <option value="Morang">Morang</option>
+            <option value="Mugu">Mugu</option>
+            <option value="Mustang">Mustang/option></option>
+            <option value="Myagdi">Myagdi</option>
+            <option value="Nawalparasi">Nawalparasi</option>
+            <option value="Nuwakot">Nuwakot</option>
+            <option value="Okhaldhunga">Okhaldhunga</option>
+            <option value="Palpa">Palpa</option>
+            <option value="Panchthar">Panchthar</option>
+            <option value="Parbat">Parbat</option>
+            <option value="Parsa">Parsa</option>
+            <option value="Pyuthan">Pyuthan</option>
+            <option value="Ramechhap">Ramechhap</option>
+            <option value="Rasuwa">Rasuwa</option>
+            <option value="Rautahat">Rautahat</option>
+            <option value="Rolpa">Rolpa</option>
+            <option value="Rukum">Rukum</option>
+            <option value="Rupandehi">Rupandehi</option>
+            <option value="Salyan">Salyan</option>
+            <option value="Sankhuwasabha">Sankhuwasabha</option>
+            <option value="Saptari">Saptari</option>
+            <option value="Sarlahi">Sarlahi</option>
+            <option value="Sindhuli">Sindhuli</option>
+            <option value="Sindhupalchok">Sindhupalchok</option>
+            <option value="Siraha">Siraha</option>
+            <option value="Solukhumbu">Solukhumbu</option>
+            <option value="Sunsari">Sunsari</option>
+            <option value="Surkhet">Surkhet</option>
+            <option value="Syangja">Syangja</option>
+            <option value="Tanahu">Tanahu</option>
+            <option value="Taplejung">Taplejung</option>
+            <option value="Terhathum">Terhathum</option>
+            <option value="Udayapur">Udayapur</option>
+            <option value="Western Rukkum">Western Rukkum</option>
+          </select>
+          <input
+            type="text"
+            placeholder="Enter your Address"
+            id="address"
+            required
+          />
+          <input type="text" placeholder="Enter your City" id="city" required />
+
+          <input
+            type="password"
+            placeholder="Create your password"
+            id="regPassword"
+          />
+          <input
+            type="password"
+            placeholder="Confirm your password"
+            id="confirmPassword"
+          />
+          <button type="submit">Register</button>
+        </form>
+        <div class="bottom-link">
+          <span>Already have an account? </span>
+          <a class="toggle-form" onclick="toggleForms()">Login here</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="footer-links">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <p style="color: #883d1a">&copy; 2023 Rentflex. All rights reserved.</p>
+    </footer>
+    <script src="L&Rform.js"></script>
+  </body>
+</html>

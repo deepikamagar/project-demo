@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Unicons CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <!--header section-->
+    <header>
+      <div id="logo">
+        <img src="images/logo.png" alt="Rentflex Logo" width="100vh" />
+      </div>
+
+      <nav>
+        <div class="search-container">
+          <i class="uil uil-search"></i>
+          <input type="text" id="searchInput" placeholder="Search..." />
+          <button type="submit" id="searchButton">Search</button>
+        </div>
+        <div class="nav-items">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="./L&Rform.html">Post Your Room</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="./L&Rform.html">Login/Register</a></li>
+        </div>
+      </nav>
+    </header>
+
+    <!-- home section-->
+    <section class="home-container" id="home">
+      <div class="home-text">
+        <h1>Welcome to Rentflex</h1>
+        <p style="color: black">Find your perfect room to rent</p>
+      </div>
+    </section>
+
+    <!--properties-->
+    <section class="properties-container" id="properties">
+      <div class="heading">
+        <span>Recent</span>
+        <h2>Featured Rooms</h2>
+      </div>
+      <section id="featured-rooms">
+        <div class="room">
+          <img src="images/img1.jpg" alt=" Room 1" />
+          <h3>Room 1</h3>
+          <p>Description of the featured room.</p>
+          <a href="#">View Details</a>
+        </div>
+        <div class="room">
+          <img src="images/img2.jpg" alt="Room 2" />
+          <h3>Room 2</h3>
+          <p>Description of the featured room.</p>
+          <a href="#">View Details</a>
+        </div>
+        <div class="room">
+          <img src="images/img3.png" alt=" Room 3" />
+          <h3>Room 3</h3>
+          <p>Description of the featured room.</p>
+          <a href="#">View Details</a>
+        </div>
+        <div class="room">
+          <img src="images/img4.png" alt=" Room 4" />
+          <h3>Room 4</h3>
+          <p>Description of the featured room.</p>
+          <a href="#">View Details</a>
+        </div>
+      </section>
+    </section>
+    <!--footer section-->
+    <footer>
+      <div id="footer-links">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <p style="color: #883d1a">&copy; 2023 Rentflex. All rights reserved.</p>
+    </footer>
+    <!--JS link-->
+    <script src="script.js"></script>
+  </body>
+</html>
